@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu1"
+        android:icon="@drawable/ic_action_search"
+        android:orderInCategory="100"
+        android:title="Search"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/menu2"
+        android:orderInCategory="100"
+        android:title="Item 2"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/menu21"
+                android:title="Item 2.1"/>
+            <item
+                android:id="@+id/menu22"
+                android:title="Item 2.2"/>
+            <item
+                android:id="@+id/menu23"
+                android:title="Item 2.3"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu3"
+        android:orderInCategory="100"
+        android:title="Color"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group
+                android:id="@+id/group"
+                android:checkableBehavior="single" >
+                <item
+                    android:id="@+id/group_item_Red"
+                    android:onClick="onGroupItemClick"
+                    android:title="Red"/>
+                <item
+                    android:id="@+id/group_item_Green"
+                    android:onClick="onGroupItemClick"
+                    android:title="Green"/>
+                <item
+                    android:id="@+id/group_item_Blue"
+                    android:onClick="onGroupItemClick"
+                    android:title="Blue"/>
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/Settings"
+        android:orderInCategory="100"
+        android:title="Settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/About"
+        android:orderInCategory="100"
+        android:title="About"
+        app:showAsAction="never" />
+
+</menu>
